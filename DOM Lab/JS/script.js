@@ -5,12 +5,14 @@ var menuLinks = [
     {text: 'account', href: '/account'},
   ];
 
-  let a = "<a><a/>";
- 
-  for (let li of liArr){
-    li.style.fontSize = '30px'
-    // console.log(li.textContent);
-}
+menuLinks.forEach(linkObj) => {
+    const a = document.createElement("a")
+    a.setAttribute('href', linkObj.href)
+    a.textContent = linkObj.text
+    topMenuEL.appendChild(a)
+    console.log(a);
+
+})
 
 const topMenuEL = document.querySelector("#top-menu");
 topMenuEL.style.height = "100%";
